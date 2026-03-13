@@ -2,52 +2,54 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { MapPin } from "lucide-react";
+import { MapPin, ChevronDown } from "lucide-react";
 
 export function Hero() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-      {/* Background image with overlay */}
+      {/* Background image with warm overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 scale-105 bg-cover bg-center bg-no-repeat transition-transform duration-[20s]"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1920&q=80')",
         }}
       >
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-3xl px-4 text-center">
-        <h1 className="font-serif text-4xl font-bold text-white sm:text-5xl md:text-6xl lg:text-7xl">
-          Welcome to
-          <br />
-          <span className="mt-2 block">BlackHorse</span>
+        <p className="text-sm font-medium uppercase tracking-[0.3em] text-white/50">
+          Est. 2013 &middot; San Luis Obispo
+        </p>
+        <h1 className="mt-4 font-serif text-5xl font-bold leading-tight text-white sm:text-6xl md:text-7xl lg:text-8xl">
+          BlackHorse
         </h1>
-        <p className="mt-2 font-serif text-lg text-white/80 italic sm:text-xl">
+        <p className="mt-1 font-serif text-xl tracking-wide text-white/70 italic sm:text-2xl">
           Espresso & Bakery
         </p>
-        <p className="mx-auto mt-6 max-w-lg text-base text-white/70 sm:text-lg">
-          Handcrafted coffee and fresh-baked goods in the heart of San Luis
-          Obispo since 2013.
+        <div className="mx-auto mt-6 h-px w-16 bg-white/20" />
+        <p className="mx-auto mt-6 max-w-md text-base leading-relaxed text-white/60">
+          Handcrafted coffee and fresh-baked goods, made with care every
+          single day.
         </p>
-        <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Button
             asChild
             size="xl"
-            className="rounded-full bg-white text-black hover:bg-white/90"
+            className="rounded-full bg-accent text-accent-foreground shadow-lg shadow-accent/20 transition-all hover:bg-accent/90 hover:shadow-xl hover:shadow-accent/30"
           >
             <Link href="/locations">
-              <MapPin size={20} />
-              Enjoy our 2 fabulous locations
+              <MapPin size={18} />
+              Visit Us
             </Link>
           </Button>
           <Button
             asChild
             size="xl"
             variant="outline"
-            className="rounded-full border-white/40 text-white hover:bg-white/10"
+            className="rounded-full border-white/20 text-white backdrop-blur-sm transition-all hover:border-white/40 hover:bg-white/10"
           >
             <Link href="/menu">View Menu</Link>
           </Button>
@@ -55,10 +57,8 @@ export function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="h-8 w-5 rounded-full border-2 border-white/40">
-          <div className="mx-auto mt-1.5 h-2 w-1 rounded-full bg-white/60" />
-        </div>
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+        <ChevronDown size={20} className="animate-bounce text-white/30" />
       </div>
     </section>
   );

@@ -1,4 +1,9 @@
+"use client";
+
+import Image from "next/image";
 import { Coffee, Clock, Heart } from "lucide-react";
+import { useAnimateOnScroll } from "@/hooks/use-animate-on-scroll";
+import { cn } from "@/lib/utils";
 
 const features = [
   {
@@ -22,24 +27,37 @@ const features = [
 ];
 
 export function AboutSection() {
+  const { ref: sectionRef, isVisible } = useAnimateOnScroll(0.1);
+  const { ref: cardsRef, isVisible: cardsVisible } = useAnimateOnScroll(0.1);
+
   return (
-    <section className="bg-background py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
+    <section className="texture-paper bg-background py-24 md:py-32">
+      <div
+        ref={sectionRef}
+        className={cn(
+          "mx-auto max-w-7xl px-4 transition-all duration-700 md:px-6",
+          isVisible ? "animate-fade-in-up" : "opacity-0"
+        )}
+      >
+        <div className="grid items-center gap-16 lg:grid-cols-2">
           {/* Text */}
           <div>
-            <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent">
+              Our Story
+            </p>
+            <h2 className="mt-3 font-serif text-3xl font-bold leading-snug text-foreground md:text-4xl lg:text-5xl">
               Coffee & Community
               <br />
-              <span className="text-accent">Go Together</span>
+              Go Together
             </h2>
-            <p className="mt-6 text-muted-foreground leading-relaxed">
+            <div className="mt-4 h-0.5 w-12 bg-accent" />
+            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
               BlackHorse was born out of an idea that coffee and community go
               together. What started over a decade ago has grown into two beloved
               locations in San Luis Obispo, each with its own personality but
               sharing the same commitment to quality.
             </p>
-            <p className="mt-4 text-muted-foreground leading-relaxed">
+            <p className="mt-4 leading-relaxed text-muted-foreground">
               Our in-house bakery produces fresh pastries, breads, and treats
               daily under the direction of our talented pastry chef. Paired with
               locally roasted Spearhead coffee and hand-crafted espresso drinks,
@@ -49,32 +67,41 @@ export function AboutSection() {
 
           {/* Image */}
           <div className="relative">
-            <div className="overflow-hidden rounded-2xl">
-              <img
+            <div className="overflow-hidden rounded-2xl shadow-xl shadow-black/5">
+              <Image
                 src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&q=80"
                 alt="Barista preparing coffee"
-                className="aspect-[4/3] w-full object-cover"
+                width={800}
+                height={600}
+                className="aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
-            <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-2xl bg-accent/10" />
-            <div className="absolute -right-4 -top-4 h-24 w-24 rounded-2xl bg-accent/10" />
+            {/* Decorative corner accents */}
+            <div className="absolute -bottom-3 -left-3 h-20 w-20 rounded-xl border-2 border-accent/20" />
+            <div className="absolute -right-3 -top-3 h-20 w-20 rounded-xl border-2 border-accent/20" />
           </div>
         </div>
 
         {/* Feature cards */}
-        <div className="mt-20 grid gap-8 md:grid-cols-3">
+        <div
+          ref={cardsRef}
+          className={cn(
+            "mt-24 grid gap-8 md:grid-cols-3",
+            cardsVisible ? "stagger-children" : "opacity-0"
+          )}
+        >
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="rounded-xl border border-border bg-card p-6 transition-shadow hover:shadow-lg"
+              className="group rounded-xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10">
-                <feature.icon className="text-accent" size={24} />
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 transition-colors group-hover:bg-accent/20">
+                <feature.icon className="text-accent" size={22} />
               </div>
-              <h3 className="mt-4 font-serif text-xl font-semibold text-card-foreground">
+              <h3 className="mt-5 font-serif text-xl font-semibold text-card-foreground">
                 {feature.title}
               </h3>
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 {feature.description}
               </p>
             </div>

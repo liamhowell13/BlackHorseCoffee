@@ -1,40 +1,40 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #1a1a1a;
+  --background: #f5faf6;
+  --foreground: #1a2e1f;
   --card: #ffffff;
-  --card-foreground: #1a1a1a;
-  --primary: #2c2c2c;
-  --primary-foreground: #ffffff;
-  --secondary: #f5f0eb;
-  --secondary-foreground: #2c2c2c;
-  --accent: #8b7355;
-  --accent-foreground: #ffffff;
-  --muted: #f5f5f5;
-  --muted-foreground: #6b6b6b;
-  --border: #e5e5e5;
-  --ring: #8b7355;
-  --destructive: #dc2626;
+  --card-foreground: #1a2e1f;
+  --primary: #1e3328;
+  --primary-foreground: #f5faf6;
+  --secondary: #e6f0e8;
+  --secondary-foreground: #1e3328;
+  --accent: #2d6a4f;
+  --accent-foreground: #f5faf6;
+  --muted: #e6f0e8;
+  --muted-foreground: #5a7062;
+  --border: #cdddd2;
+  --ring: #2d6a4f;
+  --destructive: #c4402f;
   --destructive-foreground: #ffffff;
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --card: #1a1a1a;
-  --card-foreground: #ededed;
-  --primary: #ededed;
-  --primary-foreground: #0a0a0a;
-  --secondary: #1f1f1f;
-  --secondary-foreground: #ededed;
-  --accent: #b8956a;
-  --accent-foreground: #0a0a0a;
-  --muted: #1f1f1f;
-  --muted-foreground: #999999;
-  --border: #2a2a2a;
-  --ring: #b8956a;
-  --destructive: #ef4444;
+  --background: #0a1510;
+  --foreground: #dce8df;
+  --card: #111f1a;
+  --card-foreground: #dce8df;
+  --primary: #dce8df;
+  --primary-foreground: #0a1510;
+  --secondary: #142420;
+  --secondary-foreground: #dce8df;
+  --accent: #4a9e6e;
+  --accent-foreground: #0a1510;
+  --muted: #142420;
+  --muted-foreground: #7fa88a;
+  --border: #1e3328;
+  --ring: #4a9e6e;
+  --destructive: #e05545;
   --destructive-foreground: #ffffff;
 }
 
@@ -71,14 +71,59 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Scroll-triggered fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease-out both;
+}
+
+/* Staggered children animation */
+.stagger-children > * {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out both;
+}
+.stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+.stagger-children > *:nth-child(2) { animation-delay: 100ms; }
+.stagger-children > *:nth-child(3) { animation-delay: 200ms; }
+.stagger-children > *:nth-child(4) { animation-delay: 300ms; }
+
+/* Subtle paper texture via noise overlay */
+.texture-paper {
+  position: relative;
+}
+.texture-paper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  pointer-events: none;
+  z-index: 1;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--muted);
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
   background: var(--muted-foreground);
-  border-radius: 4px;
 }

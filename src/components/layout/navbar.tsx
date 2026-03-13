@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -32,8 +33,16 @@ export function Navbar() {
     setMobileOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileOpen(false);
+    };
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, []);
+
   const navBg = scrolled || !isHome
-    ? "bg-[#1a1a1a]/95 backdrop-blur-sm shadow-sm"
+    ? "bg-[#0f2818]/95 backdrop-blur-sm shadow-lg shadow-black/10"
     : "bg-transparent";
 
   const textColor = "text-white";
@@ -48,9 +57,11 @@ export function Navbar() {
       <nav className="mx-auto flex h-[70px] max-w-7xl items-center justify-between px-4 md:px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <img
+          <Image
             src="/logo.png"
             alt="BlackHorse Espresso & Bakery"
+            width={64}
+            height={64}
             className="h-16 w-auto brightness-0 invert"
           />
         </Link>
@@ -62,7 +73,7 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               className={cn(
-                "font-nav text-sm font-medium uppercase tracking-wider transition-colors hover:text-accent",
+                "font-nav text-[13px] font-medium uppercase tracking-[0.15em] transition-colors duration-300 hover:text-accent",
                 textColor,
                 pathname === link.href && "text-accent"
               )}
@@ -80,6 +91,7 @@ export function Navbar() {
             onClick={() => setMobileOpen(!mobileOpen)}
             className={cn("p-2 transition-colors", textColor)}
             aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -88,17 +100,17 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="border-t border-border bg-white dark:bg-[#0a0a0a] md:hidden">
+        <div className="border-t border-white/10 bg-[#0f2818]/95 backdrop-blur-sm md:hidden">
           <div className="flex flex-col gap-1 px-4 py-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "rounded-md px-3 py-2.5 font-nav text-sm font-medium uppercase tracking-wider transition-colors hover:bg-secondary",
+                  "rounded-md px-3 py-2.5 font-nav text-sm font-medium uppercase tracking-wider transition-colors hover:bg-white/10",
                   pathname === link.href
-                    ? "bg-secondary text-accent"
-                    : "text-foreground"
+                    ? "bg-white/10 text-accent"
+                    : "text-white/80"
                 )}
               >
                 {link.label}
