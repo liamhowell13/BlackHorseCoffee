@@ -123,24 +123,25 @@ export default function SilverCardPageClient() {
 
             {/* Placeholder card image */}
             <div className="flex items-center justify-center">
-              <div className="relative aspect-[1.6/1] w-full max-w-sm overflow-hidden rounded-2xl bg-gradient-to-br from-[#1e4f3a] via-[#3d7a55] to-[#5a9e70] p-8 shadow-2xl">
-                <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-white/15" />
+              <div className="relative aspect-[1.6/1] w-full max-w-sm overflow-hidden rounded-2xl bg-gradient-to-br from-[#a8a9ad] via-[#d4d5d9] to-[#8a8b8f] p-8 shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-white/30" />
+                <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-white/10 to-transparent" />
                 <div className="relative flex h-full flex-col justify-between">
                   <div>
-                    <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/60">
+                    <p className="text-xs font-medium uppercase tracking-[0.2em] text-black/40">
                       Prepaid Loyalty
                     </p>
-                    <h3 className="mt-1 font-serif text-2xl font-bold text-white">
+                    <h3 className="mt-1 font-serif text-2xl font-bold text-black/80">
                       Silver Card
                     </h3>
                   </div>
                   <div>
-                    <p className="font-serif text-sm text-white/70">
+                    <p className="font-serif text-sm text-black/50">
                       BlackHorse Espresso & Bakery
                     </p>
                     <div className="mt-2 flex items-baseline gap-1">
-                      <span className="text-3xl font-bold text-white">10%</span>
-                      <span className="text-sm text-white/60">off every purchase</span>
+                      <span className="text-3xl font-bold text-black/80">10%</span>
+                      <span className="text-sm text-black/40">off every purchase</span>
                     </div>
                   </div>
                 </div>
