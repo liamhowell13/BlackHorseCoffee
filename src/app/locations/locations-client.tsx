@@ -12,8 +12,7 @@ const locations = locationData.map((loc) => ({
   address: loc.address,
   city: `${loc.city}, ${loc.state} ${loc.zip}`,
   phone: loc.phone,
-  weekdayHours: loc.weekdayHours,
-  weekendHours: loc.weekendHours,
+  hours: loc.hours,
   image: loc.image,
   features: loc.features,
 }));
@@ -73,10 +72,7 @@ function LocationBlock({ loc, index }: { loc: typeof locations[number]; index: n
 
           <div className="flex items-start gap-3">
             <Clock size={18} className="mt-0.5 shrink-0 text-accent" />
-            <div className="text-sm text-muted-foreground">
-              <p>{loc.weekdayHours}</p>
-              <p>{loc.weekendHours}</p>
-            </div>
+            <p className="text-sm text-muted-foreground">{loc.hours}</p>
           </div>
         </div>
 

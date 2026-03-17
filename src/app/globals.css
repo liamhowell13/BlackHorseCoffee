@@ -55,15 +55,15 @@
   --color-ring: var(--ring);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
-  --font-sans: var(--font-source-sans);
-  --font-serif: var(--font-playfair);
-  --font-nav: var(--font-cabin);
+  --font-sans: var(--font-josefin);
+  --font-serif: var(--font-eb-garamond);
+  --font-nav: var(--font-raleway);
+  --font-display: var(--font-fell);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), system-ui, sans-serif;
 }
 
 /* Smooth scrolling */

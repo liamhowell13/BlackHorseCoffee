@@ -10,7 +10,7 @@ const features = [
     icon: Coffee,
     title: "Local Roasters",
     description:
-      "We proudly serve Spearhead coffee, locally roasted on the Central Coast for the freshest cup possible.",
+      "We proudly serve Caribbean Coffee Company's medium dark Brazilian blend for a rich, bold cup every time.",
   },
   {
     icon: Heart,
@@ -22,7 +22,7 @@ const features = [
     icon: Clock,
     title: "10+ Years",
     description:
-      "Serving the San Luis Obispo community since 2013 with quality coffee and fresh-baked goods daily.",
+      "Serving the San Luis Obispo community since 1995 with quality coffee and fresh pastries daily.",
   },
 ];
 
@@ -58,10 +58,9 @@ export function AboutSection() {
               sharing the same commitment to quality.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              Our in-house bakery produces fresh pastries, breads, and treats
-              daily under the direction of our talented pastry chef. Paired with
-              locally roasted Spearhead coffee and hand-crafted espresso drinks,
-              every visit is a treat for the senses.
+              We offer a selection of fresh pastries and baked goods daily.
+              Paired with Caribbean Coffee Company's signature blend and
+              hand-crafted espresso drinks, every visit is a treat for the senses.
             </p>
           </div>
 

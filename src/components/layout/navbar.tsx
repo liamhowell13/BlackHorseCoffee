@@ -10,10 +10,10 @@ import { ThemeToggle } from "@/components/theme/theme-toggle";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/silver-card", label: "Silver Card" },
   { href: "/menu", label: "Menu" },
   { href: "/locations", label: "Locations" },
   { href: "/about", label: "About" },
+  { href: "/silver-card", label: "Silver Card" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -59,7 +59,7 @@ export function Navbar() {
         <Link href="/" className="flex items-center gap-2">
           <Image
             src="/logo.png"
-            alt="BlackHorse Espresso & Bakery"
+            alt="BlackHorse Espresso"
             width={64}
             height={64}
             className="h-16 w-auto brightness-0 invert"

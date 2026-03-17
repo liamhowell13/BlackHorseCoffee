@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import LocationsPageClient from "./locations-client";
 
 export const metadata: Metadata = {
-  title: "Locations | BlackHorse Espresso & Bakery",
+  title: "Locations | BlackHorse Espresso",
   description: "Find our two San Luis Obispo locations — Uptown on Higuera St. and Broad St. Hours, directions, and amenities.",
 };
 

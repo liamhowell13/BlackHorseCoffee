@@ -12,11 +12,11 @@ const galleryImages = [
     alt: "Latte art in a ceramic cup",
   },
   {
-    src: "https://images.unsplash.com/photo-1555507036-ab1f4038024a?w=600&q=80",
-    alt: "Fresh croissants from the bakery",
+    src: "https://images.unsplash.com/photo-1486887396153-fa416526c108?w=600&q=80",
+    alt: "Fresh croissants",
   },
   {
-    src: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefda?w=600&q=80",
+    src: "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=600&q=80",
     alt: "Espresso being pulled",
   },
   {
@@ -24,20 +24,36 @@ const galleryImages = [
     alt: "Coffee and pastry pairing",
   },
   {
-    src: "https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=600&q=80",
+    src: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80",
     alt: "Artisan bread loaves",
   },
   {
-    src: "https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=600&q=80",
+    src: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80",
     alt: "Cold brew coffee",
   },
   {
-    src: "https://images.unsplash.com/photo-1486427944544-d2c246c4df14?w=600&q=80",
+    src: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600&q=80",
     alt: "Cappuccino with latte art",
   },
   {
-    src: "https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?w=600&q=80",
-    alt: "Bakery display case",
+    src: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&q=80",
+    alt: "Pastry display case",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80",
+    alt: "Coffee cups on a wooden table",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80",
+    alt: "Cozy cafe interior",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1550617931-e17a7b70dce2?w=600&q=80",
+    alt: "Chocolate pastries",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600&q=80",
+    alt: "Morning coffee ritual",
   },
 ];
 

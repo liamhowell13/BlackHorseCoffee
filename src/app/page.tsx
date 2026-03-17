@@ -6,8 +6,8 @@ import { GallerySection } from "@/components/home/gallery-section";
 import { LocationsPreview } from "@/components/home/locations-preview";
 
 export const metadata: Metadata = {
-  title: "BlackHorse Espresso & Bakery | Handcrafted Coffee in SLO",
-  description: "Handcrafted coffee and fresh-baked goods in San Luis Obispo. Visit our two locations for locally roasted Spearhead coffee and artisan pastries.",
+  title: "BlackHorse Espresso | Handcrafted Coffee in SLO",
+  description: "Handcrafted coffee and fresh pastries in San Luis Obispo. Visit our two locations for Caribbean Coffee Company's medium dark Brazilian blend and artisan baked goods.",
 };
 
 export default function HomePage() {

@@ -137,7 +137,7 @@ export default function SilverCardPageClient() {
                   </div>
                   <div>
                     <p className="font-serif text-sm text-black/50">
-                      BlackHorse Espresso & Bakery
+                      BlackHorse Espresso
                     </p>
                     <div className="mt-2 flex items-baseline gap-1">
                       <span className="text-3xl font-bold text-black/80">10%</span>

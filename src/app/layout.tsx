@@ -1,29 +1,35 @@
 import type { Metadata } from "next";
-import { Source_Sans_3, Playfair_Display, Cabin } from "next/font/google";
+import { Josefin_Sans, EB_Garamond, Raleway, IM_Fell_English_SC } from "next/font/google";
 import { ThemeProvider } from "@/contexts/theme-context";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import "./globals.css";
 
-const sourceSans = Source_Sans_3({
-  variable: "--font-source-sans",
+const josefinSans = Josefin_Sans({
+  variable: "--font-josefin",
   subsets: ["latin"],
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const ebGaramond = EB_Garamond({
+  variable: "--font-eb-garamond",
   subsets: ["latin"],
 });
 
-const cabin = Cabin({
-  variable: "--font-cabin",
+const raleway = Raleway({
+  variable: "--font-raleway",
+  subsets: ["latin"],
+});
+
+const imFellEnglish = IM_Fell_English_SC({
+  variable: "--font-fell",
+  weight: "400",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "BlackHorse Espresso & Bakery",
+  title: "BlackHorse Espresso",
   description:
-    "Handcrafted coffee and fresh-baked goods in San Luis Obispo. Visit our two locations for locally roasted Spearhead coffee and artisan pastries.",
+    "Handcrafted coffee and fresh pastries in San Luis Obispo. Visit our two locations for Caribbean Coffee Company's medium dark Brazilian blend and artisan baked goods.",
 };
 
 export default function RootLayout({
@@ -32,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={`${josefinSans.variable} ${ebGaramond.variable} ${raleway.variable} ${imFellEnglish.variable}`}>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -47,9 +53,8 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body
-        className={`${sourceSans.variable} ${playfair.variable} ${cabin.variable} antialiased`}
-      >
+      <body className="antialiased">
+
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground focus:outline-none"

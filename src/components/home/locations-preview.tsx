@@ -13,8 +13,7 @@ const locations = locationData.map((loc) => ({
   address: loc.address,
   city: `${loc.city}, ${loc.state}`,
   phone: loc.phone,
-  weekday: loc.weekdayHours.replace("Monday – Friday", "Mon–Fri"),
-  weekend: loc.weekendHours.replace("Saturday – Sunday", "Sat–Sun"),
+  hours: loc.hours,
   image: loc.image,
 }));
 
@@ -73,11 +72,7 @@ export function LocationsPreview() {
                   </div>
                   <div className="flex items-start gap-3 text-sm text-muted-foreground">
                     <Clock size={15} className="mt-0.5 shrink-0 text-accent" />
-                    <span>
-                      {loc.weekday}
-                      <br />
-                      {loc.weekend}
-                    </span>
+                    <span>{loc.hours}</span>
                   </div>
                 </div>
               </div>

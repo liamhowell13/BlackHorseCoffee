@@ -10,7 +10,7 @@ const values = [
     icon: Coffee,
     title: "Quality First",
     description:
-      "We source our beans from Spearhead Coffee, locally roasted on the Central Coast. Every cup is crafted with care and precision.",
+      "We source our beans from Caribbean Coffee Company, a rich medium dark Brazilian blend. Every cup is crafted with care and precision.",
   },
   {
     icon: Users,
@@ -22,21 +22,20 @@ const values = [
     icon: Leaf,
     title: "Fresh & Local",
     description:
-      "Our bakery produces everything in-house daily using quality ingredients. We partner with local suppliers whenever possible.",
+      "We offer fresh pastries and baked goods daily using quality ingredients. We partner with local suppliers whenever possible.",
   },
   {
     icon: Award,
     title: "Craft & Passion",
     description:
-      "Our baristas and bakers are artisans. From latte art to laminated dough, we take pride in mastering our craft.",
+      "Our baristas are artisans. From latte art to the perfect pour, we take pride in mastering our craft.",
   },
 ];
 
 const timeline = [
-  { year: "2013", event: "BlackHorse Espresso & Bakery opens its first location on Higuera St. in downtown SLO." },
-  { year: "2016", event: "Our in-house bakery program launches under pastry chef Matthew Mimmack." },
-  { year: "2018", event: "Second location opens on Broad St., bringing BlackHorse to more of the community." },
-  { year: "2023", event: "Celebrating 10 years of serving San Luis Obispo with quality coffee and community." },
+  { year: "1995", event: "BlackHorse Espresso opens its first location on Higuera St. in downtown SLO." },
+  { year: "2011", event: "Second location opens on Broad St., bringing BlackHorse to more of the community." },
+  { year: "2025", event: "Celebrating 30 years of serving San Luis Obispo with quality coffee and community." },
 ];
 
 export default function AboutPageClient() {
@@ -60,7 +59,7 @@ export default function AboutPageClient() {
         </div>
         <div className="relative z-10 mx-auto max-w-2xl px-4 text-center">
           <p className="text-xs font-medium uppercase tracking-[0.3em] text-white/50">
-            Est. 2013
+            Est. 1995
           </p>
           <h1 className="mt-2 font-serif text-4xl font-bold text-white md:text-5xl">
             Our Story
@@ -92,15 +91,15 @@ export default function AboutPageClient() {
               <div className="mt-4 h-0.5 w-12 bg-accent" />
               <p className="mt-6 leading-relaxed text-muted-foreground">
                 BlackHorse was born out of an idea that coffee and community go
-                together. What began over a decade ago in downtown San Luis Obispo
+                together. What began over 30 years ago in downtown San Luis Obispo
                 has grown into two beloved locations, each with its own character
                 but sharing the same heart.
               </p>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                We proudly serve Spearhead coffee, locally roasted on the Central
-                Coast. Our talented baristas craft every drink by hand, while our
-                in-house bakery fills the shop with the aroma of fresh pastries,
-                breads, and treats every morning.
+                We proudly serve Caribbean Coffee Company's medium dark Brazilian
+                blend. Our talented baristas craft every drink by hand, while our
+                selection of fresh pastries and baked goods complements every
+                cup.
               </p>
             </div>
             <div className="relative">

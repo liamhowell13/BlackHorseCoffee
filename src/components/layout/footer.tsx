@@ -16,7 +16,7 @@ export function Footer() {
           <div>
             <Image
               src="/logo.png"
-              alt="BlackHorse Espresso & Bakery"
+              alt="BlackHorse Espresso"
               width={56}
               height={56}
               className="h-14 w-auto brightness-0 invert"
@@ -44,14 +44,14 @@ export function Footer() {
               <p className="mt-2 text-sm opacity-80">{loc.address}</p>
               <p className="text-sm opacity-80">{loc.city}, {loc.state}</p>
               <p className="mt-1 text-sm opacity-80">{loc.phone}</p>
-              <p className="mt-1 text-sm opacity-60">{loc.shortHours}</p>
+              <p className="mt-1 text-sm opacity-60">{loc.hours}</p>
             </div>
           ))}
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row">
           <p className="text-xs opacity-50">
-            &copy; {new Date().getFullYear()} BlackHorse Espresso & Bakery. All
+            &copy; {new Date().getFullYear()} BlackHorse Espresso. All
             rights reserved.
           </p>
           <div className="flex gap-6 text-xs opacity-50">

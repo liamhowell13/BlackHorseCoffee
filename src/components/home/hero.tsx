@@ -20,18 +20,18 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-3xl px-4 text-center">
-        <p className="text-sm font-medium uppercase tracking-[0.3em] text-white/50">
-          Est. 2013 &middot; San Luis Obispo
+        <p className="text-sm font-bold uppercase tracking-[0.3em] text-white/80">
+          Est. 1995 &middot; San Luis Obispo
         </p>
-        <h1 className="mt-4 font-serif text-5xl font-bold leading-tight text-white sm:text-6xl md:text-7xl lg:text-8xl">
+        <h1 className="mt-4 font-display text-5xl leading-tight text-white sm:text-6xl md:text-7xl lg:text-8xl">
           BlackHorse
         </h1>
-        <p className="mt-1 font-serif text-xl tracking-wide text-white/70 italic sm:text-2xl">
+        <p className="mt-1 font-serif text-xl font-semibold tracking-wide text-white/90 italic sm:text-2xl">
           Espresso & Bakery
         </p>
         <div className="mx-auto mt-6 h-px w-16 bg-white/20" />
-        <p className="mx-auto mt-6 max-w-md text-base leading-relaxed text-white/60">
-          Handcrafted coffee and fresh-baked goods, made with care every
+        <p className="mx-auto mt-6 max-w-md text-base font-semibold leading-relaxed text-white/80">
+          Handcrafted coffee and fresh pastries, made with care every
           single day.
         </p>
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">

@@ -12,7 +12,7 @@ const locations = locationData.map((loc) => ({
   name: loc.name,
   address: `${loc.address}, ${loc.city}, ${loc.state}`,
   phone: loc.phone,
-  hours: loc.shortHours,
+  hours: loc.hours,
 }));
 
 const socials = [
