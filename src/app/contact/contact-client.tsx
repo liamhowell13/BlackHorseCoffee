@@ -47,7 +47,7 @@ export default function ContactPageClient() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=1920&q=80')",
+              "url('/images/EricAndCustomers.JPG')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />

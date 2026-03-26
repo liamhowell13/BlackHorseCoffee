@@ -19,7 +19,7 @@ export const locations: LocationData[] = [
     zip: "93401",
     phone: "805-783-1300",
     hours: "Open 6:30 am – 5:00 pm daily",
-    image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80",
+    image: "/images/BlackHorseBuilding.JPG",
     features: ["Full espresso bar", "Fresh baked goods", "Indoor & patio seating", "Free Wi-Fi"],
   },
   {
@@ -30,7 +30,7 @@ export const locations: LocationData[] = [
     zip: "93401",
     phone: "805-439-1300",
     hours: "Open 6:30 am – 5:00 pm daily",
-    image: "https://images.unsplash.com/photo-1559305616-3f99cd43e353?w=800&q=80",
+    image: "/images/BlackHorseBuilding2.JPG",
     features: ["Full espresso bar", "Fresh baked goods", "Drive-through friendly area", "Free Wi-Fi"],
   },
 ];

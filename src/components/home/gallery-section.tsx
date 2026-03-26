@@ -7,54 +7,26 @@ import { cn } from "@/lib/utils";
 import { useAnimateOnScroll } from "@/hooks/use-animate-on-scroll";
 
 const galleryImages = [
-  {
-    src: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80",
-    alt: "Latte art in a ceramic cup",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1486887396153-fa416526c108?w=600&q=80",
-    alt: "Fresh croissants",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=600&q=80",
-    alt: "Espresso being pulled",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=600&q=80",
-    alt: "Coffee and pastry pairing",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80",
-    alt: "Artisan bread loaves",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80",
-    alt: "Cold brew coffee",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600&q=80",
-    alt: "Cappuccino with latte art",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&q=80",
-    alt: "Pastry display case",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80",
-    alt: "Coffee cups on a wooden table",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80",
-    alt: "Cozy cafe interior",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1550617931-e17a7b70dce2?w=600&q=80",
-    alt: "Chocolate pastries",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600&q=80",
-    alt: "Morning coffee ritual",
-  },
+  { src: "/images/Cappuccino.jpg", alt: "Latte art cappuccino" },
+  { src: "/images/CapAndScone.JPG", alt: "Cappuccino and scone" },
+  { src: "/images/EspressoPull.JPG", alt: "Pulling a fresh espresso shot" },
+  { src: "/images/GrindingCoffee.jpg", alt: "Grinding fresh espresso" },
+  { src: "/images/IcedCoffeeBlackhorseCup.jpg", alt: "Iced coffee in BlackHorse cup" },
+  { src: "/images/SconeDip.JPG", alt: "Scone with dipping sauce" },
+  { src: "/images/SconeCloseup.JPG", alt: "Fresh baked scone" },
+  { src: "/images/SteaminMilk.JPG", alt: "Steaming milk" },
+  { src: "/images/CappucinnoPour3.jpg", alt: "Pouring a cappuccino" },
+  { src: "/images/CappuccinoPour2.jpg", alt: "Pouring latte art" },
+  { src: "/images/MakingCapuccino.jpg", alt: "Making a cappuccino" },
+  { src: "/images/EspressoMachine.JPG", alt: "Espresso machine" },
+  { src: "/images/CapuccinoAndScone.JPG", alt: "Cappuccino paired with a scone" },
+  { src: "/images/OatSconeCloseup.JPG", alt: "Oat scone closeup" },
+  { src: "/images/CustomerDog.jpg", alt: "Furry friend at the shop" },
+  { src: "/images/IlonaBarista.JPG", alt: "Barista at work" },
+  { src: "/images/SugarBar.jpg", alt: "The sugar bar" },
+  { src: "/images/Syrups.JPG", alt: "Flavor syrups lineup" },
+  { src: "/images/CustomerInLine.JPG", alt: "Customers at the counter" },
+  { src: "/images/CapPour5.jpg", alt: "Milk pour" },
 ];
 
 export function GallerySection() {
@@ -124,19 +96,19 @@ export function GallerySection() {
               {galleryImages.map((img, i) => (
                 <div
                   key={i}
-                  className="group aspect-square flex-shrink-0 overflow-hidden rounded-xl"
+                  className="group flex-shrink-0 self-start overflow-hidden rounded-xl"
                   style={{ width: `calc(${100 / itemsPerView}% - 12px)` }}
                   role="group"
                   aria-roledescription="slide"
                   aria-label={`Slide ${i + 1} of ${galleryImages.length}`}
                 >
-                  <div className="relative h-full w-full">
+                  <div className="relative">
                     <Image
                       src={img.src}
                       alt={img.alt}
                       width={600}
                       height={600}
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-110 sm:aspect-square"
                     />
                     {/* Warm hover overlay */}
                     <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/20" />

@@ -52,7 +52,7 @@ export default function AboutPageClient() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1920&q=80')",
+              "url('/images/EspressoMachine3.JPG')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
@@ -105,15 +105,13 @@ export default function AboutPageClient() {
             <div className="relative">
               <div className="overflow-hidden rounded-2xl shadow-xl shadow-black/5">
                 <Image
-                  src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80"
-                  alt="Coffee shop ambiance"
+                  src="/images/CustomerInLine.JPG"
+                  alt="Customers at BlackHorse Espresso"
                   width={600}
                   height={600}
                   className="aspect-square w-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
-              <div className="absolute -bottom-3 -left-3 h-20 w-20 rounded-xl border-2 border-accent/20" />
-              <div className="absolute -right-3 -top-3 h-20 w-20 rounded-xl border-2 border-accent/20" />
             </div>
           </div>
         </div>
@@ -176,23 +174,34 @@ export default function AboutPageClient() {
             </h2>
             <div className="mx-auto mt-4 h-0.5 w-12 bg-accent" />
           </div>
-          <div className="mt-12 space-y-8">
-            {timeline.map((item) => (
-              <div key={item.year} className="flex gap-6">
-                <div className="flex flex-col items-center">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-bold text-accent-foreground">
-                    {item.year.slice(2)}
+          <div className="mt-12 grid items-start gap-10 md:grid-cols-[1fr_auto]">
+            <div className="space-y-8">
+              {timeline.map((item) => (
+                <div key={item.year} className="flex gap-6">
+                  <div className="flex flex-col items-center">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-bold text-accent-foreground">
+                      {item.year.slice(2)}
+                    </div>
+                    <div className="mt-2 h-full w-px bg-border" />
                   </div>
-                  <div className="mt-2 h-full w-px bg-border" />
+                  <div className="pb-4">
+                    <span className="text-sm font-bold text-accent">
+                      {item.year}
+                    </span>
+                    <p className="mt-1 leading-relaxed text-muted-foreground">{item.event}</p>
+                  </div>
                 </div>
-                <div className="pb-4">
-                  <span className="text-sm font-bold text-accent">
-                    {item.year}
-                  </span>
-                  <p className="mt-1 leading-relaxed text-muted-foreground">{item.event}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
+            <div className="hidden overflow-hidden rounded-2xl shadow-xl shadow-black/5 md:block">
+              <Image
+                src="/images/IlonaBarista.JPG"
+                alt="Barista crafting drinks at BlackHorse"
+                width={320}
+                height={420}
+                className="aspect-[3/4] w-64 object-cover transition-transform duration-700 hover:scale-105"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -200,10 +209,10 @@ export default function AboutPageClient() {
       {/* Quote */}
       <section className="relative overflow-hidden py-20 md:py-24">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          className="absolute inset-0 bg-cover bg-center md:bg-fixed"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1920&q=80')",
+              "url('/images/EspressoMachine2.JPG')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/55 to-black/65" />

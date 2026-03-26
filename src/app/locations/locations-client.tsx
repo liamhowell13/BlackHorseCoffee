@@ -122,7 +122,7 @@ export default function LocationsPageClient() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=1920&q=80')",
+              "url('/images/SugarBar.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />

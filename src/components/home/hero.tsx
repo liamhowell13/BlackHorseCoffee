@@ -12,7 +12,7 @@ export function Hero() {
         className="absolute inset-0 scale-105 bg-cover bg-center bg-no-repeat transition-transform duration-[20s]"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1920&q=80')",
+            "url('/images/EspressoPull.JPG')",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />

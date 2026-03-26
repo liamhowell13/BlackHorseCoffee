@@ -20,7 +20,7 @@ const features = [
   },
   {
     icon: Clock,
-    title: "10+ Years",
+    title: "30+ Years",
     description:
       "Serving the San Luis Obispo community since 1995 with quality coffee and fresh pastries daily.",
   },
@@ -53,7 +53,7 @@ export function AboutSection() {
             <div className="mt-4 h-0.5 w-12 bg-accent" />
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
               BlackHorse was born out of an idea that coffee and community go
-              together. What started over a decade ago has grown into two beloved
+              together. What started over 30 years ago has grown into two beloved
               locations in San Luis Obispo, each with its own personality but
               sharing the same commitment to quality.
             </p>
@@ -68,16 +68,13 @@ export function AboutSection() {
           <div className="relative">
             <div className="overflow-hidden rounded-2xl shadow-xl shadow-black/5">
               <Image
-                src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&q=80"
-                alt="Barista preparing coffee"
+                src="/images/CapAndScone.JPG"
+                alt="Cappuccino and fresh scone"
                 width={800}
                 height={600}
                 className="aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
-            {/* Decorative corner accents */}
-            <div className="absolute -bottom-3 -left-3 h-20 w-20 rounded-xl border-2 border-accent/20" />
-            <div className="absolute -right-3 -top-3 h-20 w-20 rounded-xl border-2 border-accent/20" />
           </div>
         </div>
 

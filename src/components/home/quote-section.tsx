@@ -10,10 +10,10 @@ export function QuoteSection() {
     <section className="relative overflow-hidden py-24 md:py-32">
       {/* Background */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-fixed"
+        className="absolute inset-0 bg-cover bg-center md:bg-fixed"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1920&q=80')",
+            "url('/images/EspressoMachine.JPG')",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/55 to-black/65" />

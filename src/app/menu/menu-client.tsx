@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { useAnimateOnScroll } from "@/hooks/use-animate-on-scroll";
 
@@ -124,6 +125,21 @@ const menuSections: MenuSection[] = [
 
 const sectionTabs = menuSections.map((s) => s.section);
 
+const menuPhotos: Record<string, { src: string; alt: string }[]> = {
+  "Hot Drinks": [
+    { src: "/images/EspressoPull2.JPG", alt: "Pulling an espresso shot" },
+    { src: "/images/Capucinno1.JPG", alt: "Fresh cappuccino" },
+  ],
+  "Cold Drinks": [
+    { src: "/images/CapuccinoPour4.jpg", alt: "Pouring a cold drink" },
+    { src: "/images/Syrups2.JPG", alt: "Flavor syrups" },
+  ],
+  "Baked Goods": [
+    { src: "/images/SconeAgain.JPG", alt: "Fresh baked scone" },
+    { src: "/images/Scone.JPG", alt: "Scone on a plate" },
+  ],
+};
+
 export default function MenuPageClient() {
   const [activeSection, setActiveSection] = useState(sectionTabs[0]);
   const { ref: menuRef, isVisible: menuVisible } = useAnimateOnScroll(0.05);
@@ -136,7 +152,7 @@ export default function MenuPageClient() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1920&q=80')",
+              "url('/images/Syrups.JPG')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
@@ -245,6 +261,26 @@ export default function MenuPageClient() {
                   </div>
                 </div>
               ))}
+
+              {/* Photo accent strip */}
+              {menuPhotos[section.section] && (
+                <div className="grid grid-cols-2 gap-4 pt-4">
+                  {menuPhotos[section.section].map((photo) => (
+                    <div
+                      key={photo.src}
+                      className="overflow-hidden rounded-xl"
+                    >
+                      <Image
+                        src={photo.src}
+                        alt={photo.alt}
+                        width={600}
+                        height={400}
+                        className="aspect-[3/2] w-full object-cover transition-transform duration-700 hover:scale-105"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
       </div>

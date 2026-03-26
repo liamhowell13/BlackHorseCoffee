@@ -65,7 +65,7 @@ export default function SilverCardPageClient() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=1920&q=80')",
+              "url('/images/Cap&Scone5.JPG')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
@@ -245,10 +245,10 @@ export default function SilverCardPageClient() {
       {/* CTA */}
       <section className="relative overflow-hidden py-20 md:py-24">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          className="absolute inset-0 bg-cover bg-center md:bg-fixed"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1920&q=80')",
+              "url('/images/CappuccinoPour2.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/55 to-black/65" />
