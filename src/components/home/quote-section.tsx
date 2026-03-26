@@ -7,17 +7,15 @@ export function QuoteSection() {
   const { ref, isVisible } = useAnimateOnScroll(0.2);
 
   return (
-    <section className="relative overflow-hidden py-24 md:py-32">
-      {/* Background */}
-      <div
-        className="absolute inset-0 bg-cover bg-center md:bg-fixed"
-        style={{
-          backgroundImage:
-            "url('/images/EspressoMachine.JPG')",
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/55 to-black/65" />
-      </div>
+    <section
+      className="relative py-24 bg-cover bg-center md:bg-fixed md:py-32"
+      style={{
+        backgroundImage:
+          "url('/images/EspressoMachine.JPG')",
+      }}
+    >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/55 to-black/65" />
 
       {/* Content */}
       <div
