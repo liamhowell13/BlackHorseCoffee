@@ -30,7 +30,7 @@ export const locations: LocationData[] = [
     zip: "93401",
     phone: "805-439-1300",
     hours: "Open 6:30 am – 5:00 pm daily",
-    image: "/images/BlackHorseBuilding2.JPG",
+    image: "/images/broad%20st%20outside%20storefront.jpg",
     features: ["Full espresso bar", "Fresh baked goods", "Drive-through friendly area", "Free Wi-Fi"],
   },
 ];

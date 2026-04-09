@@ -127,16 +127,16 @@ const sectionTabs = menuSections.map((s) => s.section);
 
 const menuPhotos: Record<string, { src: string; alt: string }[]> = {
   "Hot Drinks": [
-    { src: "/images/EspressoPull2.JPG", alt: "Pulling an espresso shot" },
-    { src: "/images/Capucinno1.JPG", alt: "Fresh cappuccino" },
+    { src: "/images/genera.jpg", alt: "Generra latte with orange peel" },
+    { src: "/images/process.jpg", alt: "Barista pulling a shot" },
   ],
   "Cold Drinks": [
-    { src: "/images/CapuccinoPour4.jpg", alt: "Pouring a cold drink" },
-    { src: "/images/Syrups2.JPG", alt: "Flavor syrups" },
+    { src: "/images/IcedCoffeeBlackhorseCup.jpg", alt: "Iced coffee in BlackHorse cup" },
+    { src: "/images/cups.jpg", alt: "Cups warming on the La Marzocco" },
   ],
   "Baked Goods": [
-    { src: "/images/SconeAgain.JPG", alt: "Fresh baked scone" },
-    { src: "/images/Scone.JPG", alt: "Scone on a plate" },
+    { src: "/images/croissant.jpg", alt: "Chocolate, plain, and almond croissants" },
+    { src: "/images/cinn%20roll.jpg", alt: "Bakery case with cinnamon rolls" },
   ],
 };
 
@@ -152,7 +152,7 @@ export default function MenuPageClient() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('/images/Syrups.JPG')",
+              "url('/images/cinn%20roll.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />

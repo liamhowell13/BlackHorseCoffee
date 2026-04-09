@@ -119,10 +119,10 @@ export default function LocationsPageClient() {
       {/* Hero banner */}
       <div className="relative flex h-64 items-center justify-center overflow-hidden md:h-80">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-[center_60%]"
           style={{
             backgroundImage:
-              "url('/images/SugarBar.jpg')",
+              "url('/images/broad%20st%20red%20banner.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />

@@ -52,7 +52,7 @@ export default function AboutPageClient() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('/images/EspressoMachine3.JPG')",
+              "url('/images/vines.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
@@ -212,7 +212,7 @@ export default function AboutPageClient() {
           className="absolute inset-0 bg-cover bg-center md:bg-fixed"
           style={{
             backgroundImage:
-              "url('/images/EspressoMachine2.JPG')",
+              "url('/images/triple%20grouphead.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/55 to-black/65" />

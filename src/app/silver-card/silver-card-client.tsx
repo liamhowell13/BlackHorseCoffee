@@ -62,10 +62,10 @@ export default function SilverCardPageClient() {
       {/* Hero */}
       <div className="relative flex h-72 items-center justify-center overflow-hidden md:h-96">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-[center_45%]"
           style={{
             backgroundImage:
-              "url('/images/Cap&Scone5.JPG')",
+              "url('/images/cups.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
@@ -248,7 +248,7 @@ export default function SilverCardPageClient() {
           className="absolute inset-0 bg-cover bg-center md:bg-fixed"
           style={{
             backgroundImage:
-              "url('/images/CappuccinoPour2.jpg')",
+              "url('/images/process.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/55 to-black/65" />
